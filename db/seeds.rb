@@ -39,5 +39,5 @@ end
 # Creation de 10 PM avec Faker
 10.times do
   nb_receiver = User.all.sample(rand(1...5))
-  pm = PrivateMessage.create!(recipient_id: nb_receiver, sender_id: User.all.sample.id, content: Faker::Quote.yoda)
+  pm = PrivateMessage.create!(recipient_id: nb_receiver.id, sender_id: User.all.sample.id, content: Faker::Quote.yoda)
 end
